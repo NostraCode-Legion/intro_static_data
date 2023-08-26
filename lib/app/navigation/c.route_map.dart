@@ -7,6 +7,9 @@ class RouteMap {
     // Routes.root: (RouteData data) => const HomeView(),
     //* master -- ----- ----- ----- ----- -----
 
-    Routes.product: (RouteData data) => const ProductView(),
+    Routes.productsList: (RouteData data) => const ProductListView(),
+    Routes.productsDetail: (RouteData data) => const ProductDetailView(),
+    Routes.productsAdd: (RouteData data) => const ProductAddView(),
+    Routes.productsEdit: (RouteData data) => const ProductEditView(),
   };
 }

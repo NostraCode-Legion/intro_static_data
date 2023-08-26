@@ -1,1 +1,1 @@
-export 'product/_index.dart';
+export 'products/_index.dart';

@@ -1,6 +1,6 @@
+import 'package:intro_static_data/ui_screens/_index.dart';
 import 'package:states_rebuilder/states_rebuilder.dart';
 
-import '../../ui_screens/_index.dart';
 import '../_index.dart';
 
 part 'a.inject.dart';

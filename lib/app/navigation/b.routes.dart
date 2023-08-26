@@ -6,5 +6,8 @@ class Routes {
   // static const root = '/';
   //* master -- ----- ----- ----- ----- -----
 
-  static const product = '/product';
+  static const productsList = '/productsList';
+  static const productsDetail = '/productsDetail';
+  static const productsAdd = '/productsAdd';
+  static const productsEdit = '/productsEdit';
 }

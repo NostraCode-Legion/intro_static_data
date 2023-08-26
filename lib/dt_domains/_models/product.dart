@@ -6,12 +6,14 @@ class Product {
   final int price;
   final int quantity;
   final String createdAt;
+  final String updatedAt;
   Product({
     this.id = '',
     this.name = '',
     this.price = 0,
     this.quantity = 0,
     this.createdAt = '',
+    this.updatedAt = '',
   });
 
   // * --------- Dibuat terpisah -------------
@@ -54,6 +56,7 @@ class Product {
     int? price,
     int? quantity,
     String? createdAt,
+    String? updatedAt,
   }) {
     return Product(
       id: id ?? this.id,
@@ -61,6 +64,7 @@ class Product {
       price: price ?? this.price,
       quantity: quantity ?? this.quantity,
       createdAt: createdAt ?? this.createdAt,
+      updatedAt: updatedAt ?? this.updatedAt,
     );
   }
 
@@ -72,6 +76,7 @@ class Product {
     result.addAll({'price': price});
     result.addAll({'quantity': quantity});
     result.addAll({'created_at': createdAt});
+    result.addAll({'updated_at': updatedAt});
 
     return result;
   }
@@ -83,6 +88,7 @@ class Product {
       price: map['price']?.toInt() ?? 0,
       quantity: map['quantity']?.toInt() ?? 0,
       createdAt: map['created_at'] ?? '',
+      updatedAt: map['updated_at'] ?? '',
     );
   }
 
@@ -92,7 +98,7 @@ class Product {
 
   @override
   String toString() {
-    return 'Product(id: $id, name: $name, price: $price, quantity: $quantity, createdAt: $createdAt)';
+    return 'Product(id: $id, name: $name, price: $price, quantity: $quantity, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
@@ -104,11 +110,12 @@ class Product {
         other.name == name &&
         other.price == price &&
         other.quantity == quantity &&
-        other.createdAt == createdAt;
+        other.createdAt == createdAt &&
+        other.updatedAt == updatedAt;
   }
 
   @override
   int get hashCode {
-    return id.hashCode ^ name.hashCode ^ price.hashCode ^ quantity.hashCode ^ createdAt.hashCode;
+    return id.hashCode ^ name.hashCode ^ price.hashCode ^ quantity.hashCode ^ createdAt.hashCode ^ updatedAt.hashCode;
   }
 }
