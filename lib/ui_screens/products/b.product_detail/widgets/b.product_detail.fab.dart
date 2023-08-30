@@ -6,7 +6,7 @@ class ProductDetailFab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      child: const Icon(Icons.add),
+      child: const Icon(Icons.edit),
       onPressed: () => _ctFromEdit.getProductEdit(),
     );
   }
