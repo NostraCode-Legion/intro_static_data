@@ -5,7 +5,12 @@ class ProductListData {
 
   final rxInt = 0.inj();
 
-  final rxProductList = RM.inject<List<Product>>(() => []);
+  final rxProductList = RM.inject<List<Product>>(
+    () => [],
+    sideEffects: SideEffects(
+      initState: () => _ct.getAllProducts(),
+    ),
+  );
 
   final rxSelectedId = RM.inject<String>(() => '');
 }

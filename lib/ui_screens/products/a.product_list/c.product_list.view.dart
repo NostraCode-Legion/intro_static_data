@@ -5,19 +5,26 @@ class ProductListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ProductListAppbar(),
       ),
-      floatingActionButton: ProductListFab(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      floatingActionButton: const ProductListFab(),
+      body: OnBuilder.data(
+        listenTo: _dt.rxProductList,
+        builder: (data) => ListView(
           children: [
-            ProductListCharlie(),
-            ProductListDelta(),
-            ProductListEcho(),
+            ...List.generate(
+              data.length,
+              (index) => Card(
+                child: ListTile(
+                  title: Text(data[index].name),
+                  subtitle: Text('RP ${Fun.formatRupiah.format(data[index].price)}'),
+                  onTap: () => _ct.select(data[index].id),
+                ),
+              ),
+            ),
           ],
         ),
       ),
