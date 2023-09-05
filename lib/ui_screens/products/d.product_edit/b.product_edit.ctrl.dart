@@ -19,6 +19,7 @@ class ProductEditCtrl {
 
     final index = _dt.rxProductList.st.indexWhere((element) => element.id == newProduct.id);
     _dt.rxProductList.setState((s) => s[index] = newProduct);
+    logx.wtf(newProduct.toString());
     return _dt.rxProductList.st[index];
   }
 

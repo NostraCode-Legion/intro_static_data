@@ -12,7 +12,7 @@ class ProductDetailCtrl {
     return _dt.rxProductList.st[index];
   }
 
-  // * Menangkap fungsi untuk me read oleh productList
+  // * Menangkap fungsi untuk me read oleh product
 
   getProductDetail() {
     _dt.rxProduct.st = readProductDetail();
@@ -25,9 +25,4 @@ class ProductDetailCtrl {
     nav.back();
     nav.back();
   }
-
-  // deleteProduct() {
-  //   _dt.rxProduct.st = removeById();
-  //   logx.e(_dt.rxProduct.st.toString());
-  // }
 }

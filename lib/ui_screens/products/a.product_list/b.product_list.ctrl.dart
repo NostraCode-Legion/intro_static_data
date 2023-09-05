@@ -43,6 +43,7 @@ class ProductListCtrl {
   deleteAllProducts() {
     for (var product in _dt.rxProductList.st) {
       removeById(product.id);
+      logx.e(product.toString());
       nav.back();
       nav.back();
     }

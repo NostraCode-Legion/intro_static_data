@@ -59,7 +59,7 @@ yang ada di b.product_list.data dan buat fungsi untuk menangkap read tersebut.
 state menjadi reaktif dan jangan lupakan properti listen_to: ketikan saja karena belum auto.
 12. Buat variabel selectedId untuk menandakan id menggunakan fungsi setSelectedId, dan gunakan di fungsi select.
 13. Panggil fungsi select di onTap product_list.view untuk pindah ke page product_detail.
-14. Buat variabel productFuture di product_detail.data untuk menyimpan salah satu productList yang di tap
+14. Buat variabel rxproduct di product_detail.data untuk menyimpan salah satu productList yang di tap
 15. Buat fungsi yang me read product_detail, dan jangan lupa buat juga fungsi untuk mewadahinya.
 16. Pindah ke product_add, di datanya  panggil rxproductLIst yang ada di data.productList.
 17. Gunakan variabel rxProductList ke dalam fungsi addproduct yang kita akan buat
